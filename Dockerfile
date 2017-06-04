@@ -5,5 +5,9 @@ RUN apt-get install git vim python make -y
 
 RUN git clone https://github.com/webcast/webcaster.git 
 
+RUN openssl req -new -x509 -keyout /tmp/server.pem -out /tmp/server.pem -days 365 -nodes -subj "/C=GB/L=London/O=MyCompany/OU=MyOU/CN=MyCN"
+
+COPY run.py /webcaster/https/run.py
+
 WORKDIR /webcaster
 
