@@ -11,4 +11,4 @@ COPY run.py /webcaster/https/run.py
 
 WORKDIR /webcaster
 
-ENTRYPOINT make srun
+ENTRYPOINT make run
